@@ -1,0 +1,29 @@
+@import "../../assets/variables.scss";
+.container {
+    background-color: transparent;
+    margin: 2rem 3rem 5rem 3rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.titleContainer {
+    background: $button-color;
+    border-radius: 20px;  /* Redondeo de las esquinas superiores */
+    margin-bottom: 1.3rem;
+    color: $font-dark;
+    padding: 1rem;  /* Espaciado dentro del contenedor */
+}
+
+.container h3 {
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;  /* Elimina el padding extra dentro del h3 */
+}
+
+@media screen and (max-width: 930px) {
+    .container {
+        margin: 2rem 1rem 5rem 1rem;
+    }
+}

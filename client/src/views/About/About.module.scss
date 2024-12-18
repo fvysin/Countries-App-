@@ -1,0 +1,135 @@
+
+@import "../../assets/variables.scss";
+*{
+  margin: 0;
+}
+
+body {
+  background-image: url('../../assets/Cerro-Torre-Background-Wallpaper-114780.jpg');
+  background-position: center center;
+  background-size: cover; /* Asegura que el fondo cubra toda la página */
+  background-repeat: no-repeat;
+  height: 100%; /* Asegura que ocupe toda la altura de la pantalla */
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+ body::before {
+  content: "";  /* Crea un pseudo-elemento vacío */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:url('../../assets/Cerro-Torre-Background-Wallpaper-114780.jpg') ;
+    opacity: 0.7; /* Aquí aplicamos la opacidad */
+  z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
+}
+
+.content {
+  padding: 2rem;
+  font-size: 1.5rem;
+  background-color: $third-color;
+  display: inline-block;
+  margin: 1rem;
+  border-radius: 20px;
+  max-width: 850px;
+  font-size: 1.2rem;
+  color: $font-dark;
+
+}
+
+
+
+.infoContainer {
+  align-items: center;
+  box-shadow: $black-shadow;
+
+}
+
+.img {
+  width: 250px;
+}
+
+.floatRight {
+  float: right;
+}
+
+.floatLeft {
+  float: left;
+}
+
+.list {
+  list-style: disclosure-closed;
+}
+
+.content p {
+  margin-bottom: 1rem;
+}
+
+.link {
+  color: $primary-color;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.containerAllIcons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  background-color: $secondary-color;
+  padding: 1rem;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  border: 2px solid white;
+}
+
+.iconContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.iconContainer p {
+  margin: 0;
+}
+
+.faReact {
+  color: $primary-color;
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 580px) {
+  .floatRight,
+  .floatLeft {
+    float: none;
+  }
+
+  .containerImg {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .img {
+    width: 150px;
+  }
+
+  .content {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+}

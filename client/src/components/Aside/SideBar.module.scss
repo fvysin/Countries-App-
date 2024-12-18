@@ -1,0 +1,156 @@
+@import "../../assets/variables.scss";
+.container {
+  //   background-color: $secondary-color;
+  padding: 1rem;
+  width: 230px;
+  color: $font-dark ;
+
+  //   background-image: url("https://i.pinimg.com/originals/3b/39/52/3b3952e85cd3d86bf9d17dd7486f8c88.jpg");
+}
+
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+
+  background-color: white;
+  opacity: 0.7;
+  border-radius: 1.2em;
+  padding: 1rem;
+  box-shadow: $black-shadow;
+}
+.icon {
+  align-self: end;
+  font-size: 1.6rem;
+}
+// label{
+//     color:$font-dark;
+// }
+input,
+select,
+.btnClear,
+.btnSearch,
+option {
+  padding: 0.48rem 0.8rem;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  outline: none;
+  box-shadow: none;
+  margin: 5px;
+  width: 100%;
+}
+// label {
+//   padding: 1rem;
+// }
+aside h2 {
+  margin-top: 1em;
+}
+
+.inputSearchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputSearchContainer form {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.inputSearchContainer a {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  background-color: #6167799e;
+  padding: 0.8rem;
+  border-top-right-radius: 10px;
+  transition: background-color 0.5s;
+}
+
+.inputSearchContainer a:hover {
+  background-color: $secondary-color;
+}
+
+select {
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.filterContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.btnClearContainer {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.btnClear {
+  width: 100%;
+  font-size: 1.4rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  box-shadow: $black-shadow;
+  background-color: $button-color;
+}
+.btnClear:hover {
+  box-shadow: 5px 7px 21px 0px $secondary-color,
+    5px 7px 21px 0px rgba(0, 0, 0, 0.8);
+  color: $font-light;
+}
+.btnSearch {
+  width: 100%;
+  font-size: 1.4rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 2em;
+}
+.btnSearch:hover {
+  background-color: $button-color;
+}
+
+.btnMenuFilters {
+  display: none;
+  background-color: $button-color;
+  padding: 1rem;
+  font-size: 1.4rem;
+  border-bottom: 2px solid $font-dark;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
+}
+
+.icon {
+  padding-right: 1rem;
+  color: black;
+}
+
+@media screen and (max-width: 930px) {
+  .container {
+    position: absolute;
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+    background: $button-color;
+    left: 0px;
+    top: -100000px;
+    text-align: center;
+    transition: left 0.5s;
+    z-index: 1;
+    width: 100%;
+    transition: top 0.5s ease-in-out;
+  }
+  .btnMenuFilters {
+    display: block;
+  }
+
+  .showContainer {
+    top: 120px;
+  }
+}

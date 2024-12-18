@@ -1,0 +1,42 @@
+@import "../../assets/variables.scss";
+*{
+    margin: 0;
+
+}
+.container {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    height: 100%;
+    width: 100%;
+    background-image: url('../../assets/Cerro-Torre-Patagonia-Argentina-Wallpaper-HD-114801.jpg');
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+  }
+.container::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../../assets/Cerro-Torre-Patagonia-Argentina-Wallpaper-HD-114801.jpg'); /* Imagen de fondo */
+    opacity: 0.5; /* Aquí aplicamos la opacidad */
+    z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
+  }
+
+@media screen and (max-width: 930px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    color: grey;
+    
+    align-items: center;
+
+}

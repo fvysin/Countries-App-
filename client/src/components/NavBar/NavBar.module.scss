@@ -1,0 +1,121 @@
+@import "../../assets/variables.scss";
+.navbar {
+  background-color: #ffffff00;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* left: 0; 
+	top: 0; 
+	position: fixed; 
+    width: 100%;
+    z-index: 10; */
+  // border-bottom: 2px solid $secondary-color;
+  max-height: 100px;
+  padding: 0;
+}
+.logoContainer {
+  display: flex;
+  flex-direction: row;
+}
+.logoContainer h2 {
+  padding-top: 10px;
+}
+
+.btnsContainer {
+  display: flex;
+  gap: 1rem;
+}
+
+.list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.btn {
+  margin-top: 2em;
+  align-self: center;
+  padding: 0.7em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 10px;
+  border: none;
+  color: black;
+  transition: 0.4s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 1px;
+  background-color: $button-color;
+}
+
+.btn:hover {
+  box-shadow: 6px 6px 0px #969696, -3px -3px 10px #ffffff;
+  transform: translateX(-0.5em) translateY(-0.5em);
+}
+
+li:last-child {
+  margin-right: 2rem;
+}
+
+.img {
+  height: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.containerMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.btnMenu {
+  color: white;
+  background-color: #000000e3;
+  padding: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+// .btnMenu:hover {
+//   background-color: #000;
+// }
+.logoName {
+  color: white;
+}
+@media screen and (max-width: 930px) {
+  .list {
+    position: absolute;
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.738);
+    left: -1000px;
+    top: 40px;
+    text-align: center;
+    z-index: 1;
+    transition: left 0.5s;
+    z-index: 2;
+  }
+
+  li:last-child {
+    margin-right: 0;
+  }
+
+  .btn {
+    display: block;
+    width: 250px;
+  }
+
+  .containerMenu {
+    display: block;
+  }
+
+  .visible {
+    left: 0;
+  }
+  
+}
