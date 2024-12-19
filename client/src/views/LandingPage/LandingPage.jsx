@@ -26,7 +26,7 @@ const LandingPage = () => {
         
         {/* button */}
         <Link to="/home" className={style.btn}>
-        &gt;_ START JOURNEY
+        START JOURNEY
         </Link>
       </div>
     </div>

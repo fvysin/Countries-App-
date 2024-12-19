@@ -21,7 +21,7 @@ const Navbar = () => {
       <NavLink to="/home">
         <div className={style.logoContainer}>
           <img className={style.img} src={logo} alt="Logo" />
-          <h2 className={style.logoName}>&gt;_ World Trip</h2>
+          <h2 className={style.logoName}> Travelling around the world</h2>
         </div>
       </NavLink>
       <div className={style.btnsContainer}>
@@ -37,13 +37,13 @@ const Navbar = () => {
             </NavLink>
           </li> */}
           <li>
-            <NavLink onClick={handleOnClick} className={style.btn} to="/about">
-              About
+            <NavLink onClick={handleOnClick} className={style.btn} to="/form">
+              Create Activity
             </NavLink>
           </li>
           <li>
-            <NavLink onClick={handleOnClick} className={style.btn} to="/form">
-              Create Activity
+            <NavLink onClick={handleOnClick} className={style.btn} to="/about">
+              About
             </NavLink>
           </li>
           <li>

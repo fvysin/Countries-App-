@@ -26,7 +26,7 @@ const Cards = () => {
   return (
     <main className={style.container}>
       <div className={style.titleContainer}>
-        <h3>&gt;_ Countries</h3>
+        <h3>Countries</h3>
       </div>
       {loaded && filteredCountries.length ? ( // checks if data is loaded and there are filtered countries
         <AllCountries filteredCountries={filteredCountries} limit={limit} />

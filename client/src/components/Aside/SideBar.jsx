@@ -116,15 +116,16 @@ const SideBar = () => {
 
   return (
     <>
+    <div className="style.containerbig">
+
       <div className={style.btnMenuFilters}>
         {/* Button to toggle filter panel visibility */}
-        <a onClick={handleShowFilters} href="#">
-          ⚙ Filters
+        <a onClick={handleShowFilters} href="#">Filters
         </a>
       </div>
       {/* Filter panel */}
       <aside ref={asideContainer} className={style.container}>
-        <h2>&gt;_ Filters</h2>
+        <h2>Filters</h2>
 
         {/* Button to clear all filters */}
         <div className={style.btnClearContainer}>
@@ -146,12 +147,12 @@ const SideBar = () => {
                 type="text"
                 placeholder="Country name"
                 id="filter"
-              />
+                />
               <button
                 onClick={handleOnSubmit}
                 href="#"
                 className={style.btnSearch}
-              >
+                >
                 🔎
               </button>
             </form>
@@ -166,7 +167,7 @@ const SideBar = () => {
             defaultValue={"All"}
             className={style.select}
             id="continent"
-          >
+            >
             {/* Options for continent filter */}
             {Array.from([
               "All",
@@ -195,7 +196,7 @@ const SideBar = () => {
             defaultValue={"None"}
             className={style.select}
             id="orderAlphabetically"
-          >
+            >
             {/* Options for alphabetical order filter */}
             <option value="None">None</option>
             {Array.from(["A-Z", "Z-A"]).map((order) => {
@@ -216,7 +217,7 @@ const SideBar = () => {
             defaultValue={"None"}
             className={style.select}
             id="orderPopulation"
-          >
+            >
             {/* Options for population order filter */}
             <option value="None">None</option>
             {Array.from(["Ascendent", "Descendent"]).map((order) => {
@@ -237,7 +238,7 @@ const SideBar = () => {
             defaultValue={"All"}
             className={style.select}
             id="activities"
-          >
+            >
             {/* Options for activity filter */}
             <option value="All">All</option>
             {activities.all.map((activity) => {
@@ -250,36 +251,10 @@ const SideBar = () => {
           </select>
         </FieldsSideBar>
       </aside>
+            </div>
     </>
   );
 };
 
 export default SideBar;
 
-// State Management:
-
-// actualFilters: This state variable holds the currently selected filters, including name, order, continent, and activity.
-// searchedCountry: This state variable is used to manage the input value when searching for a country by name.
-// Ref Elements:
-
-// asideContainer, orderAlphabetically, orderContinent, orderPopulation, and orderActivity are references to DOM elements. They are used to toggle the visibility of the sidebar and manage dropdown selections.
-// Filter Functions:
-
-// clearFilters(): Toggles the visibility of the sidebar to clear all filters.
-// handleShowFilters(e): Toggles the visibility of the sidebar when the "Filters" button is clicked.
-// handleClearFilters(): Clears all filters and resets the state variables and dropdown selections.
-// handleOnSubmit(e): Handles the search by name functionality when the search icon is clicked.
-// handleInputChange(e): Updates the searchedCountry state when the input field value changes.
-// handleContinentSelect(e): Handles continent filter selection.
-// handleAlphabeticallySelect(e): Handles alphabetical order filter selection.
-// handlePopulationSelect(e): Handles population order filter selection.
-// handleActivitySelect(e): Handles activity filter selection.
-// Effect Hook:
-
-// The useEffect hook listens for changes in the actualFilters state variable and dispatches the filterCountries action with the selected filters whenever they change.
-// Render Method:
-
-// The component renders a button labeled "Filters" to show/hide the sidebar.
-// The sidebar is conditionally rendered based on the asideContainer ref and includes various filtering options such as name search, continent selection, alphabetical order, population order, and activity selection.
-// The FieldsSideBar component is used to create the filter sections and group related UI elements together.
-// Dropdowns and input fields trigger filter updates when interacted with.

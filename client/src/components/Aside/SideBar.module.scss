@@ -1,11 +1,29 @@
 @import "../../assets/variables.scss";
 .container {
-  //   background-color: $secondary-color;
   padding: 1rem;
   width: 230px;
-  color: $font-dark ;
+  color: $font-dark;
+  position: relative;
+}
 
-  //   background-image: url("https://i.pinimg.com/originals/3b/39/52/3b3952e85cd3d86bf9d17dd7486f8c88.jpg");
+.containerbig {
+  border-radius: 1px;
+  color: white;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%; // Esto hace que la línea ocupe todo el ancho del contenedor
+
+}
+
+.container h2 {
+  color: white;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
 .searchContainer {
@@ -14,20 +32,18 @@
   justify-content: center;
   gap: 1rem;
   margin-top: 1.5rem;
-
   background-color: white;
   opacity: 0.7;
   border-radius: 1.2em;
   padding: 1rem;
   box-shadow: $black-shadow;
 }
+
 .icon {
   align-self: end;
   font-size: 1.6rem;
 }
-// label{
-//     color:$font-dark;
-// }
+
 input,
 select,
 .btnClear,
@@ -41,9 +57,7 @@ option {
   margin: 5px;
   width: 100%;
 }
-// label {
-//   padding: 1rem;
-// }
+
 aside h2 {
   margin-top: 1em;
 }
@@ -99,11 +113,12 @@ select {
   box-shadow: $black-shadow;
   background-color: $button-color;
 }
+
 .btnClear:hover {
-  box-shadow: 5px 7px 21px 0px $secondary-color,
-    5px 7px 21px 0px rgba(0, 0, 0, 0.8);
+  box-shadow: 5px 7px 21px 0px $secondary-color, 5px 7px 21px 0px rgba(0, 0, 0, 0.8);
   color: $font-light;
 }
+
 .btnSearch {
   width: 100%;
   font-size: 1.4rem;
@@ -111,6 +126,7 @@ select {
   cursor: pointer;
   border-radius: 2em;
 }
+
 .btnSearch:hover {
   background-color: $button-color;
 }
@@ -124,6 +140,7 @@ select {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   text-align: center;
+  align-items: center;
 }
 
 .icon {
@@ -146,6 +163,7 @@ select {
     width: 100%;
     transition: top 0.5s ease-in-out;
   }
+
   .btnMenuFilters {
     display: block;
   }
